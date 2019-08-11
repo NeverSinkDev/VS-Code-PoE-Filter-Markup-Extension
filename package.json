@@ -1,8 +1,13 @@
 {
-    "name": "filter-language",
-    "displayName": "filter-language",
-    "description": "filterlang syntax highlight",
-    "version": "0.0.1",
+    "name": "poe-filter-language",
+    "displayName": "poe-filter-language",
+    "description": "A Path of Exile Filter langauge extension by NeverSink",
+    "publisher": "NeverSink",
+    "version": "1.0.0",
+    "repository": {
+        "url": "https://github.com/NeverSinkDev/VS-Code-PoE-Filter-Markup-Extension",
+        "type": "git"
+    },
     "engines": {
         "vscode": "^1.30.0"
     },
