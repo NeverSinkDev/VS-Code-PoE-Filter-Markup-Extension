@@ -1,0 +1,94 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "filter",
+	"patterns": [{
+		"include": "#operator"
+	},
+	{
+		"include": "#number"
+	},
+	{
+		"include": "#keywords"
+	},
+	{
+		"include": "#attribute"
+	},
+	{
+		"include": "#strings"
+	},
+	{
+		"include": "#comment-line"
+	},
+	{
+		"include": "#storage"
+	},
+	{
+		"include": "#token.warn-token"
+	},
+	{
+		"include": "#token.debug-token"
+	}
+	],
+	"repository": {
+		"operator": {
+			"patterns": [{
+				"name": "keyword",
+				"match": "(=|<|>)"
+			}]
+		},
+		"number": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "(1|2|3|4|5|6|7|8|9|0|Rare|Unique|Normal|Magic|True|False|Blue|Red|Green|Yellow|White|Brown|Circle|Triagle|Hexagon|Square|Star|Diamond)"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword",
+				"match": "\\b(Show|Hide)\\b"
+			}]
+		},
+		"attribute": {
+			"patterns": [{
+				"name": "variable",
+				"match": "\\b(Prophecy|MapTier|LinkedSockets|BaseType|Class|Rarity|ItemLevel|DropLevel|Sockets|SocketGroup|Width|Height|Quality|Corrupted|GemLevel|ShapedMap|Identified|HasExplicitMod|ShaperItem|ElderItem)\\b"
+			}]
+		},
+		"storage": {
+			"patterns": [{
+				"name": "storage",
+				"match": "\\b(CustomAlertSound|DisableDropSound|PlayAlertSoundPositional|PlayEffect|MinimapIcon|SetTextColor|SetBackgroundColor|SetBorderColor|SetFontSize|PlayAlertSound)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+				"name": "string",
+				"match": "\\\\"
+			}]
+		},
+		"comment-line": {
+			"name": "comment",
+			"begin": "#",
+			"end": "\n",
+			"patterns": [
+			{
+				"name": "token.debug-token",
+				"begin": "%",
+				"end": "(?=\\s)"
+			},			
+			{
+				"name": "token.warn-token",
+				"begin": "\\$",
+				"end": "(?=\\s)"
+			},
+			{
+				"name": "comment",
+				"match": "\\\\"
+			}]
+		}
+	},
+	"scopeName": "text.html"
+}

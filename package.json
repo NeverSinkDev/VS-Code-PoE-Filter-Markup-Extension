@@ -1,0 +1,25 @@
+{
+    "name": "filter-language",
+    "displayName": "filter-language",
+    "description": "filterlang syntax highlight",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "filter",
+            "aliases": ["filter", "filter"],
+            "extensions": [".filter"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "filter",
+            "scopeName": "text.html",
+            "path": "./syntaxes/filter.tmLanguage.json"
+        }]
+    }
+}
