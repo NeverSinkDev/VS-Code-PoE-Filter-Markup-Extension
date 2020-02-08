@@ -51,13 +51,13 @@
 		"attribute": {
 			"patterns": [{
 				"name": "variable",
-				"match": "\\b(Prophecy|MapTier|LinkedSockets|BaseType|Class|Rarity|ItemLevel|DropLevel|Sockets|SocketGroup|Width|Height|Quality|Corrupted|GemLevel|ShapedMap|Identified|HasExplicitMod|ShaperItem|ElderItem)\\b"
+				"match": "\\b(Class|BaseType|Prophecy|HasExplicitMod|Rarity|DropLevel|ItemLevel|StackSize|GemLevel|Sockets|LinkedSockets|SocketGroup|Quality|Width|Height|MapTier|Identified|Corrupted|ElderItem|ShaperItem|ShapedMap|BlightedMap|ElderMap|FracturedItem|SynthesisedItem|AnyEnchantment|HasEnchantment|HasInfluence)\\b"
 			}]
 		},
 		"storage": {
 			"patterns": [{
 				"name": "storage",
-				"match": "\\b(CustomAlertSound|DisableDropSound|PlayAlertSoundPositional|PlayEffect|MinimapIcon|SetTextColor|SetBackgroundColor|SetBorderColor|SetFontSize|PlayAlertSound)\\b"
+				"match": "\\b(SetBackgroundColor|SetTextColor|SetFontSize|SetBorderColor|PlayAlertSound|PlayAlertSoundPositional|CustomAlertSound|DisableDropSound|MinimapIcon|PlayEffect)\\b"
 			}]
 		},
 		"strings": {
