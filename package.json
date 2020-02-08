@@ -3,7 +3,7 @@
     "displayName": "poe-filter-language",
     "description": "A Path of Exile Filter langauge extension by NeverSink",
     "publisher": "NeverSink",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "repository": {
         "url": "https://github.com/NeverSinkDev/VS-Code-PoE-Filter-Markup-Extension",
         "type": "git"
@@ -15,16 +15,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "filter",
-            "aliases": ["filter", "filter"],
-            "extensions": [".filter"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "filter",
-            "scopeName": "text.html",
-            "path": "./syntaxes/filter.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "filter",
+                "aliases": [
+                    "filter",
+                    "filter"
+                ],
+                "extensions": [
+                    ".filter"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "filter",
+                "scopeName": "text.html",
+                "path": "./syntaxes/filter.tmLanguage.json"
+            }
+        ]
     }
 }
