@@ -39,19 +39,19 @@
 		"number": {
 			"patterns": [{
 				"name": "entity.name.function",
-				"match": "(1|2|3|4|5|6|7|8|9|0|Rare|Unique|Normal|Magic|True|False|Blue|Red|Green|Yellow|White|Brown|Circle|Triagle|Hexagon|Square|Star|Diamond)"
+				"match": "(1|2|3|4|5|6|7|8|9|0|None|Rare|Unique|Normal|Magic|True|False|Blue|Red|Green|Yellow|White|Brown|Circle|Triagle|Hexagon|Square|Star|Diamond)"
 			}]
 		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword",
-				"match": "\\b(Show|Hide)\\b"
+				"match": "\\b(Show|Hide|Continue)\\b"
 			}]
 		},
 		"attribute": {
 			"patterns": [{
 				"name": "variable",
-				"match": "\\b(Class|BaseType|Prophecy|HasExplicitMod|Rarity|DropLevel|ItemLevel|StackSize|GemLevel|Sockets|LinkedSockets|SocketGroup|Quality|Width|Height|MapTier|Identified|Corrupted|ElderItem|ShaperItem|ShapedMap|BlightedMap|ElderMap|FracturedItem|SynthesisedItem|AnyEnchantment|HasEnchantment|HasInfluence)\\b"
+				"match": "\\b(Mirrored|AreaLevel|CorruptedMods|Class|BaseType|Prophecy|HasExplicitMod|Rarity|DropLevel|ItemLevel|StackSize|GemLevel|Sockets|LinkedSockets|SocketGroup|Quality|Width|Height|MapTier|Identified|Corrupted|ElderItem|ShaperItem|ShapedMap|BlightedMap|ElderMap|FracturedItem|SynthesisedItem|AnyEnchantment|HasEnchantment|HasInfluence)\\b"
 			}]
 		},
 		"storage": {
