@@ -11,53 +11,71 @@
 		"include": "#keywords"
 	},
 	{
-		"include": "#attribute"
-	},
-	{
 		"include": "#strings"
 	},
 	{
 		"include": "#comment-line"
 	},
 	{
-		"include": "#storage"
-	},
-	{
-		"include": "#token.warn-token"
-	},
-	{
-		"include": "#token.debug-token"
-	}
-	],
+		"include": "#exo"
+	}],
 	"repository": {
 		"operator": {
 			"patterns": [{
+				"name": "punctuation.definition.tag",
+				"match": "(\\{|\\}|\\[|\\]|\\(|\\)|\\;|\\:|\\,)"
+			},
+			{
 				"name": "keyword",
-				"match": "(=|<|>)"
+				"match": "(=|<|>|\\-|\\+)"
 			}]
 		},
 		"number": {
 			"patterns": [{
 				"name": "entity.name.function",
-				"match": "(1|2|3|4|5|6|7|8|9|0|None|Rare|Unique|Normal|Magic|True|False|Blue|Red|Green|Yellow|White|Brown|Circle|Triagle|Hexagon|Square|Star|Diamond)"
+				"match": "\\b(\\d+)\\b"
 			}]
 		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword",
-				"match": "\\b(Show|Hide|Continue)\\b"
-			}]
-		},
-		"attribute": {
-			"patterns": [{
+				"match": "\\b(Show|Hide|Continue|ShowD|HideD|Cont)\\b"
+			},
+			{
+				"name": "entity.name.function",
+				"match": "\\b(Rare|Normal|Magic|Unique|True|False|Crusader|Redeemer|Hunter|Elder|Shaper|Warlord|Divergent|Phantasmal|Anomalous|Blue|Green|Brown|Red|White|Yellow|Cyan|Grey|Orange|Pink|Purple|Circle|Diamond|Hexagon|Square|Star|Triangle|Cross|Moon|Raindrop|Kite|Pentagon|UpsideDownHouse|Temp|NONE|None)\\b"
+			},
+			{
 				"name": "variable",
-				"match": "\\b(Mirrored|AreaLevel|CorruptedMods|Class|BaseType|Prophecy|HasExplicitMod|Rarity|DropLevel|ItemLevel|StackSize|GemLevel|Sockets|LinkedSockets|SocketGroup|Quality|Width|Height|MapTier|Identified|Corrupted|ElderItem|ShaperItem|ShapedMap|BlightedMap|ElderMap|FracturedItem|SynthesisedItem|AnyEnchantment|HasEnchantment|HasInfluence)\\b"
+				"match": "\\b(Replica|AlternateQuality|FracturedItem|SynthesisedItem|AnyEnchantment|BlightedMap|ShapedMap|ElderItem|ShaperItem|Corrupted|Identified|ElderMap|Mirrored|HasInfluence|GemQualityType|LinkedSockets|Sockets|Quality|MapTier|Width|Height|StackSize|CorruptedMods|GemLevel|ItemLevel|DropLevel|AreaLevel|Rarity|EnchantmentPassiveNum|SocketGroup|Class|BaseType|Prophecy|HasExplicitMod)\\b"
+			},
+			{
+				"name": "storage",
+				"match": "\\b(SetFontSize|SetTextColor|SetBorderColor|SetBackgroundColor|DisableDropSound|PlayAlertSound|PlayAlertSoundPositional|CustomAlertSound|PlayEffect|MinimapIcon)\\b"
 			}]
 		},
-		"storage": {
+		"exo": {
 			"patterns": [{
 				"name": "storage",
-				"match": "\\b(SetBackgroundColor|SetTextColor|SetFontSize|SetBorderColor|PlayAlertSound|PlayAlertSoundPositional|CustomAlertSound|DisableDropSound|MinimapIcon|PlayEffect)\\b"
+				"match": "\\b(Section|Style|var|Empty|Auto|Apply|Func|Mod)\\b"
+			},
+			{
+				"name": "token.debug-token",
+				"begin": "!",
+				"end": "($|(?=;))",
+				"patterns": [{
+					"name": "punctuation.definition.tag",
+					"match": "(\\.|\\;)"
+				}]
+			},
+			{
+				"name": "token.warn-token",
+				"begin": "%",
+				"end": "($|(?=;))",
+				"patterns": [{
+					"name": "punctuation.definition.tag",
+					"match": "(\\.|\\;)"
+				}]
 			}]
 		},
 		"strings": {

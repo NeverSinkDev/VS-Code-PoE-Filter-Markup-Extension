@@ -35,5 +35,9 @@
                 "path": "./syntaxes/filter.tmLanguage.json"
             }
         ]
+    },
+    "dependencies": {
+        "generator-code": "^1.4.12",
+        "yo": "^4.0.0"
     }
 }
