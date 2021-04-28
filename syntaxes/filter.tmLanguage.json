@@ -27,7 +27,7 @@
 			},
 			{
 				"name": "keyword",
-				"match": "(=|<|>|\\-|\\+)"
+				"match": "(=|<|>|\\-|\\+|\\*)"
 			}]
 		},
 		"number": {
@@ -57,12 +57,21 @@
 		"exo": {
 			"patterns": [{
 				"name": "storage",
-				"match": "\\b(Section|Style|var|Empty|Auto|Apply|Func|Mod)\\b"
+				"match": "\\b(Section|Style|var|Empty|Auto|Apply|Func|Mod|MM|Sound|BG|Beam|BC|BD|TX|BT|Base)\\b"
 			},
 			{
 				"name": "token.debug-token",
 				"begin": "!",
 				"end": "($|(?=;))",
+				"patterns": [{
+					"name": "punctuation.definition.tag",
+					"match": "(\\.|\\;)"
+				}]
+			},
+			{
+				"name": "token.debug-token",
+				"begin": "\\$",
+				"end": "($|(?=;)|(?==>))",
 				"patterns": [{
 					"name": "punctuation.definition.tag",
 					"match": "(\\.|\\;)"
