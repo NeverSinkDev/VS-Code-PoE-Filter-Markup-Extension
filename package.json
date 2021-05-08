@@ -3,7 +3,7 @@
     "displayName": "poe-filter-language",
     "description": "A Path of Exile Filter langauge extension by NeverSink",
     "publisher": "NeverSink",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "repository": {
         "url": "https://github.com/NeverSinkDev/VS-Code-PoE-Filter-Markup-Extension",
         "type": "git"
@@ -20,10 +20,10 @@
                 "id": "filter",
                 "aliases": [
                     "filter",
-                    "filter"
+                    "exo"
                 ],
                 "extensions": [
-                    ".filter"
+                    ".filter", ".exo"
                 ],
                 "configuration": "./language-configuration.json"
             }
