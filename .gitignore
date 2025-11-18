@@ -61,3 +61,10 @@ typings/
 .next
 
 test\.filter
+
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+.vscode/
