@@ -10,6 +10,6 @@ This is a small visual studio code extension that provides markup for the Path o
 
 ## Contact
 
-https://twitter.com/NeverSinkGaming or https://github.com/NeverSinkDev
+https://twitter.com/NeverSinkDev or https://github.com/NeverSinkDev
 
 **Enjoy!**

@@ -11,7 +11,7 @@
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
 			"args": ["--extensionDevelopmentPath=${workspaceFolder}"],
-			// "preLaunchTask": "npm: compile",
+			"preLaunchTask": "npm: compile",  // Uncommented - will compile before launch
 			"outFiles": ["${workspaceFolder}/out/**/*.js"]
 		}
 	]

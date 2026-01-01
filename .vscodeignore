@@ -1,6 +1,10 @@
 .vscode
 node_modules
-out/
 src/
 tsconfig.json
 webpack.config.js
+.gitignore
+.eslintrc.json
+*.vsix
+**/*.map
+**/*.ts

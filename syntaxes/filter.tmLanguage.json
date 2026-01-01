@@ -39,7 +39,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword",
-				"match": "\\b(Show|Hide|Continue|ShowD|HideD|Cont)\\b"
+				"match": "\\b(Show|Hide|Continue|ShowD|Minimal|HideD|Cont)\\b"
 			},
 			{
 				"name": "entity.name.function",
@@ -47,7 +47,7 @@
 			},
 			{
 				"name": "variable",
-				"match": "\\b(Replica|AlternateQuality|FracturedItem|SynthesisedItem|AnyEnchantment|BlightedMap|ShapedMap|ElderItem|ShaperItem|Corrupted|Identified|ElderMap|Mirrored|HasInfluence|GemQualityType|LinkedSockets|Sockets|Quality|MapTier|Width|Height|StackSize|CorruptedMods|GemLevel|ItemLevel|DropLevel|AreaLevel|Rarity|EnchantmentPassiveNum|SocketGroup|Class|BaseType|Prophecy|HasExplicitMod)\\b"
+				"match": "\\b(TransfiguredGem|UberBlightedMap|HasCruciblePassiveTree|Scourged|ArchnemesisMod|HasSearingExarchImplicit|HasEaterOfWorldsImplicit|BaseDefencePercentile|BaseEnergyShield|BaseEvasion|BaseArmour|BaseWard|Replica|AlternateQuality|FracturedItem|SynthesisedItem|AnyEnchantment|BlightedMap|ShapedMap|ElderItem|ShaperItem|Corrupted|Identified|ElderMap|Mirrored|HasInfluence|GemQualityType|LinkedSockets|Sockets|Quality|MapTier|WaystoneTier|Width|Height|StackSize|CorruptedMods|GemLevel|ItemLevel|DropLevel|AreaLevel|Rarity|EnchantmentPassiveNum|EnchantmentPassiveNode|SocketGroup|Class|BaseType|Prophecy|HasExplicitMod|HasEnchantment|ZanaMemory|HasImplicitMod|Foulborn|HasVaalUniqueMod|TwiceCorrupted|AlwaysShow|IsVaalUnique|MemoryStrands|UnidentifiedItemTier)\\b"
 			},
 			{
 				"name": "storage",
@@ -57,7 +57,7 @@
 		"exo": {
 			"patterns": [{
 				"name": "storage",
-				"match": "\\b(Section|Style|var|Empty|Auto|Apply|Func|Mod|MM|Sound|BG|Beam|BC|BD|TX|BT|Base)\\b"
+				"match": "\\b(Section|Style|var|Empty|BLANK|Auto|Apply|Func|Mod|MM|Sound|BG|Beam|BC|BD|TX|BT|Base)\\b"
 			},
 			{
 				"name": "token.debug-token",
@@ -101,6 +101,11 @@
 			"begin": "#",
 			"end": "\n",
 			"patterns": [
+			{
+				"name": "token.info-token",
+				"begin": "!!",
+				"end": "(?=\\n)"
+			},
 			{
 				"name": "token.debug-token",
 				"begin": "%",

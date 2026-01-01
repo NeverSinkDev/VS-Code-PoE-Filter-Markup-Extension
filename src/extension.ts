@@ -10,9 +10,6 @@ export function activate(context: vscode.ExtensionContext) {
     // map rgba string -> decoration type so we can reuse and dispose
     const decorationTypes = new Map<string, vscode.TextEditorDecorationType>();
 
-    // regex: match "Set...Color" followed by four decimal numbers separated by whitespace
-    const colorRegex = /Set[^\n]*?Color\s+(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)/gi;
-
     function hexToRgba(hex: string): { rgba: string; opaque: string } {
         let h = hex.replace('#', '');
         if (h.length === 3) {
@@ -36,9 +33,12 @@ export function activate(context: vscode.ExtensionContext) {
         const doc = editor.document;
         if (doc.languageId !== 'filter') return;
 
+        const colorRegex = /(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)/gi;
+        
         const text = doc.getText();
         const found = new Map<string, vscode.DecorationOptions[]>();
         let m: RegExpExecArray | null;
+
         while ((m = colorRegex.exec(text)) !== null) {
             const match = m[0];
             const start = doc.positionAt(m.index);
